@@ -1,2 +1,2 @@
 # trybe-exercicios
-Aqui ficarão meus exercícios da trybe
+Aqui ficarão meus exercícios da tryb
