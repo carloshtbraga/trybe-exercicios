@@ -1,0 +1,14 @@
+ol, ul{
+    display: inline-block;
+    border: 2px solid black;
+    margin: 0 auto;
+    width: 35%;
+}
+
+
+.teste {
+    background-color: aqua;
+    
+}
+
+
