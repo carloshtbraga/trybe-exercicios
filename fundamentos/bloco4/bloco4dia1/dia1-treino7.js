@@ -1,5 +1,3 @@
-
-
 let faixaEtaria = 'adulto';
 
 switch (faixaEtaria) {
