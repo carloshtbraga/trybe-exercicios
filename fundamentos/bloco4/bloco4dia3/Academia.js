@@ -8,7 +8,7 @@ Procure esse elemento dentro do array, e imprima no terminal a posição index e
 Caso não o encontre, imprima:
 
 "Elemento não encontrado no array"*/
-let numero=30
+let numero=13
 let numbers= [7, 10, 17, 83, 25, 2, 13]
 /*for (let index= 0; index<numbers.length; index+=1 ){
     if(numbers[index] === numero){

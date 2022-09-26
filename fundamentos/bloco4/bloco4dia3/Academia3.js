@@ -16,7 +16,7 @@ let inicial = 0
 let final = 150
 
 for(let index=inicial; index <= final; index +=1 ){
-    if(index / 3 == 0){
+    if(index % 3 === 0){
         resultado+=1
     } 
 }console.log(resultado)
