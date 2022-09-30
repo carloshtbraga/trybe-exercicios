@@ -58,60 +58,84 @@
   <body>
     <script>
       
-        
-        let criarh1 = document.createElement("h1")
-        criarh1.innerHTML = "Exercício - JavaScript DOM"
-        document.body.appendChild(criarh1)
+//       Adicione a tag h1 com o texto Exercício - JavaScript DOM como filho da tag body;
+let h1Tag = document.createElement("h1");
+h1Tag.innerHTML = "Exercícios DOM";
+document.body.appendChild(h1Tag);
+// Adicione a tag main com a classe main-content como filho da tag body;
+let mainTag = document.createElement("main");
+mainTag.className = "main-content";
+document.body.appendChild(mainTag);
+// Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+let section1 = document.createElement('section');
+section1.className = "center-content";
+mainTag.appendChild(section1);
+// Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+let pTag = document.createElement("p");
+pTag.innerHTML = "ALGUM TEXTO";
+section1.appendChild(pTag);
+
+// Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+let section2 = document.createElement("section");
+section2.className = "left-content";
+mainTag.appendChild(section2)
+
+// Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+let section3 = document.createElement("section");
+section3.className = "right-content";
+mainTag.appendChild(section3)
+// Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+let imgTag = document.createElement("img");
+imgTag.src = "https://picsum.photos/200";
+imgTag.className = "small-image";
+section2.appendChild(imgTag);
+// Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+let ulTag = document.createElement("ul");
+section3.appendChild(ulTag);
+let arrayOfNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+for (let index=0; index < arrayOfNumbers.length;index+=1){
+  let liTag = document.createElement("li")
+  liTag.innerHTML = arrayOfNumbers[index]
+  ulTag.appendChild(liTag)
+}
 
 
-        let tagmain = document.createElement("main")
-        tagmain.className = "main-content"
-        document.body.appendChild(tagmain)
-
-      
-        let tagSection = document.createElement("section")
-        tagSection.className = "center-content"
-        tagmain.appendChild(tagSection)
-
-        let tagP = document.createElement("p")
-        tagP.innerHTML = "TRYBE TA DIFICIL"
-        tagSection.appendChild(tagP)
-
-        let tagSection2 = document.createElement("section")
-        tagSection2.className = "left-content"
-        tagmain.appendChild(tagSection2)
-
-        let tagSection3 = document.createElement("section")
-        tagSection3.className = "right-content"
-        tagmain.appendChild(tagSection3)
-
-        let tagImg = document.createElement("img")
-        tagImg.src = "https://picsum.photos/200"
-        tagImg.className = "small-image"
-        tagSection2.appendChild(tagImg)
-
-        let tagList = document.createElement("ul")
-        let array = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
-        for (let index = 0; index< array.length;index+=1){
-            let li = document.createElement("li")
-            li.innerHTML = array[index]
-            tagSection3.appendChild(li)
-        }
-
-        for (let index =1; index <=3; index +=1){
-            let tagH3 = document.createElement("h3")
-            tagmain.appendChild(tagH3)
-
-        }
+// Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+for(let index = 0;index<3;index+=1){
+  let h3Tag = document.createElement("h3");
+  mainTag.appendChild(h3Tag)
+}
 
 
-        let classTitle = document.querySelector("h1")
-        classTitle.className = "title"
+// Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+// Adicione a classe title na tag h1 criada;
 
-        let description = document.getElementsByTagName("h3")
-        for (let index=0; index < 3; index+=1){
-            description[index].className = "description"
-        }
+h1Tag.className = "title"
+
+// Adicione a classe description nas 3 tags h3 criadas;
+let descripition = document.getElementsByTagName("h3")
+
+for(let index=0; index<3; index+=1){
+descripition[index].className ="description"
+};
+// Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+let remover = document.getElementsByClassName("left-content")[0];
+mainTag.removeChild(remover)
+
+
+// Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+let centralize = document.getElementsByClassName("right-content")[0]
+centralize.style.marginRight = "auto"
+// Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+// mainTag.style.backgroundColor = "salmon"
+
+let colorChange = document.getElementsByClassName("center-content")[0];
+
+colorChange.parentNode.style.backgroundColor = "green";
+
+// Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.     
+ulTag.lastChild.remove()
+ulTag.lastChild.remove()
 
     </script>
   </body>
