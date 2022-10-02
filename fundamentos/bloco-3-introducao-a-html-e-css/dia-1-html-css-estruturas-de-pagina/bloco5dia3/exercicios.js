@@ -90,3 +90,78 @@ if (diaX[index].style.backgroundColor === newColor){
 
 }
 changeColor();
+
+// parte 4
+
+function createButton(string){
+let divBotao = document.getElementsByClassName('buttons-container')[0];
+let Botao = document.createElement('button');
+Botao.innerHTML = string
+Botao.id = 'btn-friday'
+divBotao.appendChild(Botao)
+}
+createButton('Sexta-Feira')
+
+//parte 5
+
+function textMod(){
+let botao = document.getElementById('btn-friday');
+let weekDays = document.querySelectorAll('.week-days');
+let novoTexto = "SEXTOUUUUUUUU";
+botao.addEventListener('click', function(){
+  for (index = 0; index < weekDays.length;index+=1){
+    if (weekDays[index].innerTEXT === 'Sexta'){
+      weekDays[index].innerTEXT = novoTexto;
+    } else{
+      weekDays[index].innerTEXT = weekDays[index];
+    }
+}
+
+})
+}
+
+textMod();
+
+// PARTE 6
+function mouseOver(){
+  let days = document.getElementById('days');
+  days.addEventListener('mouseover', function(event){
+    event.target.style.fontSize = '40px'
+  })
+}
+
+function mouseOut(){
+  let days = document.getElementById('days');
+  days.addEventListener('mouseout', function(event){
+    event.target.style.fontSize = '20px'
+  })
+}
+
+mouseOver();
+mouseOut();
+
+// PARTE 7
+
+function newTask(task){
+  let taskLocalization = document.querySelector('.my-tasks');
+  let taskname = document.createElement('span')
+  taskname.innerHTML = task
+  taskLocalization.appendChild(taskname)
+}
+
+
+newTask('cagar')
+
+//parte 8
+
+function colorTask(para){
+  div1 = document.querySelector('.my-tasks');
+  div2 = document.createElement('div');
+  div2.className = 'task';
+  div2.style.backgroundColor = para;
+  div1.appendChild(div2);
+
+
+
+}
+colorTask('blue');
