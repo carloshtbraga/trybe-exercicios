@@ -106,7 +106,7 @@ createButton('Sexta-Feira')
 
 function textMod(){
 let botao = document.getElementById('btn-friday');
-let weekDays = document.querySelectorAll('.week-days');
+let weekDays = document.getElementsByClassName('friday');
 let novoTexto = "SEXTOUUUUUUUU";
 botao.addEventListener('click', function(){
   for (index = 0; index < weekDays.length;index+=1){
@@ -119,8 +119,9 @@ botao.addEventListener('click', function(){
 
 })
 }
+let coisa = [4, 11, 18, 25];
 
-textMod();
+textMod(coisa);
 
 // PARTE 6
 function mouseOver(){
@@ -150,7 +151,7 @@ function newTask(task){
 }
 
 
-newTask('cagar')
+newTask('Cozinhar')
 
 //parte 8
 
@@ -165,3 +166,46 @@ function colorTask(para){
 
 }
 colorTask('blue');
+
+
+// parte 9
+
+
+function SelectTask(){
+  let myTask = document.querySelector('.task')
+  let selectedTask = document.getElementsByClassName('task selected')
+
+  myTask.addEventListener('click', function(event){
+    if (selectedTask.length === 0){
+      event.target.className = "task selected";
+    } else {
+      event.target.className = 'task';
+    }
+
+
+  })
+}
+
+selectedTask();
+
+
+// parte 10
+
+// function setDayColor() {
+//   let selectedTask = document.getElementsByClassName('task selected');
+//   let days = document.querySelector('#days');
+//   let taskDiv = document.querySelector('.task');
+//   let taskColor = taskDiv.style.backgroundColor;
+  
+//   days.addEventListener('click', function(event){
+//     let eventTargetColor = event.target.style.color;
+//     if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+//       let color = selectedTask[0].style.backgroundColor; // Pega a cor de fundo do primeiro elemento salvo na variável "selectedTask" e salva na variável "color"
+//       event.target.style.color = color; // atribui a cor salva na variável "color" ao evento alvo
+//     } else if (eventTargetColor === taskColor) {
+//       event.target.style.color = 'rgb(119,119,119)';  // Altera a cor de fundo do evento alvo para "rgb(119, 119, 119)"
+//     }
+//   });
+// }
+
+// setDayColor();
