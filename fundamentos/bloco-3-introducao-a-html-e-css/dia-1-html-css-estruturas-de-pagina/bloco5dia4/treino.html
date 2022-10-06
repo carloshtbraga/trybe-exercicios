@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="treino.css">
+</head>
+<body>
+<header>
+<h1>
+EXERCÍCIO
+</h1>    
+</header>
+<section class="section1">
+<div class="divs"></div>
+<div class="divs"></div>
+<div class="divs"></div>
+<div class="divs"></div>
+</section>
+<script src="treino.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Leitor</title>
+<style>
+body {
+margin: 10px;
+}
+.preferences {
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+border: 1px solid green;
+}
+.options {
+display: flex;
+flex-direction: column;
+}
+.title {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.description {
+display: flex;
+justify-content: center;
+align-items: center;
+font-style: italic;
+}
+.content {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 15px;
+}
+.paragraph {
+display: flex;
+}
+</style>
+<script>
+window.onload = function() {
+function setBackgroundColor() {
+let content = document.querySelector(".content").addEventListener('click', function(event){
+style.backgroundColor = 'purple'
+})
+
+localStorage.getItem("backgroundColor" )
+}
+
+setBackgroundColor(); 
+}
+
+</script>
+</head>
+<body>
+<section class="preferences">
+<section id="background-color" class="options">
+<span>Cor de fundo</span>
+<button onclick="document.querySelector('.content').style.backgroundColor = 'purple'">roxo</button>
+<button onclick="document.querySelector('.content').style.backgroundColor = 'white'">branco</button>
+<button onclick="document.querySelector('.content').style.backgroundColor = 
+'blue'">azul</button>
+<button onclick="document.querySelector('.content').style.backgroundColor = 'red'">vermelho</button>
+<button onclick="document.querySelector('.content').style.backgroundColor = 'yellow'">amarelo</button>
+</section> 
+<article class="content">
+    <p class="paragraph">
+    
+    </p>
+    <p class="paragraph">
+    
+    </p>
+    <p class="paragraph">
+    
+    </p>
+    <p class="paragraph">
+    
+    </p>
+    <p class="paragraph">
+    
+    </p>
+    <p class="paragraph">
+    
+    </p>
+    
+    </p>
+    <form>
+    
+    </form>
+    </article>
+    </main> 
+    </body>
+    </html> 
