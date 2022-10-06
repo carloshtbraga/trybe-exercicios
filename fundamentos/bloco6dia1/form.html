@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <form action="" method="get">
+    <label for="name">Nome:</label>
+    <input type="text" name="full-name" id="name" maxlength="40" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="e-mail" id="email" maxlength="50" required>
+    <br><br>
+    <h2>Destino Preferido</h2>
+    <input type="radio" name="destino" id="destino1">
+    <label for="destino1">Praia</label>
+    <input type="radio" name="destino" id="destino2">
+    <label for="destino2">Montanha</label>
+    <input type="radio" name="destino" id="destino3">
+    <label for="destino3">Campo</label>
+    <input type="radio" name="destino" id="destino4">
+    <label for="destino4">Cidade</label>
+    <br><br>
+    <h2>Por que você deveria ganhar o concurso?</h2>
+    <textarea name="concurso" id="texto" cols="30" rows="10" maxlength="500"></textarea>
+    <br>
+    <label for="data">Melhora data para você viajar:</label>
+    <input type="date" name="data" id="data">
+    <br><br><br>
+    <label for="concordo1">Gostaria de receber emails?</label>
+    <input type="checkbox" name="infoemail" id="concordo1">
+    <br>
+    <label for="concordo2">Podemos mostrar suas fotos?</label>  
+    <input type="checkbox" name="infofoto" id="concordo2">
+    <br><br><br>
+    <button id="submit-btn" type="submit">Enviar</button>
+    <button id="reset-btn" type="reset">Reset</button>
+
+</form>
+<script src="form.js"></script>
+</body>
+</html>
