@@ -1,0 +1,32 @@
+.header {
+  background-color: rgb(50, 167, 145);
+  display: flex;
+  justify-content: space-around;
+
+}
+.trybewarts-login{
+  display: flex;
+}
+
+#logo1{
+    width: 40px;
+}
+
+#evaluation-form{
+    display: flex;
+    width: 675px;
+    flex-direction: column;
+}
+
+.principal{
+    display: flex;
+}
+
+#trybewarts-forms-logo{
+    height: 500px;
+}
+
+.label-family input{
+    display: flex;
+    flex-direction: column;
+}
