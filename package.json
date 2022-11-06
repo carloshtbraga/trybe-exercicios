@@ -1,0 +1,28 @@
+{
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "description": "Aqui ficarão meus exercícios da trybe, todos divididos em pastas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open",
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloshtbraga/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carloshtbraga/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/carloshtbraga/trybe-exercicios#readme",
+  "dependencies": {
+    "clipboard-copy": "^4.0.1",
+    "nanoid": "^4.0.0",
+    "vite": "^3.2.2"
+  },
+  "type": "module"
+}
