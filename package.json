@@ -1,12 +1,12 @@
 {
   "name": "trybe-exercicios",
   "version": "1.0.0",
-  "description": "Aqui ficarão meus exercícios da trybe, todos divididos em pastas",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --open",
-    "lint": "eslint ./src"
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/carloshtbraga/trybe-exercicios#readme",
   "dependencies": {
-    "clipboard-copy": "^4.0.1",
-    "nanoid": "^4.0.0",
+    "eslint-config-trybe-frontend": "^1.3.1",
+    "validator": "^13.7.0",
     "vite": "^3.2.2"
   },
-  "type": "module"
+  "type": "module"  
 }

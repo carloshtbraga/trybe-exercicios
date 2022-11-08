@@ -1,16 +1,30 @@
-import { nanoid } from 'nanoid'
-import "./style.css";
-import copy from 'clipboard-copy'
+// Vamos importar nossa biblioteca
+import validator from 'validator';
 
+// Aqui, vamos selecionar, pelos ids, os campos em nossa página
+const campoDeTexto = document.querySelector('#value');
+const botao = document.querySelector('#button');
+const seletor = document.querySelector('#option');
+const textoDeSaida = document.querySelector('#answer');
 
-const passwordBtnEl = document.querySelector('button');
-const displayPasswordEl = document.querySelector('h2');
+botao.addEventListener('click', (event) => {
+  // Vamos usar o preventDefault() para evitar que, ao
+  // clicar no botão, ele recarregue a página
+  event.preventDefault();
+  const UUID_VERSION = 4;
+  // Aqui, criamos um objeto cujas chaves são os tipos a
+  // serem validados. Por exemplo, a chave CPF valida se
+  // o campoDeTexto.value é um CPF.
+  const campos = {
+    cpf: validator.isTaxID(campoDeTexto.value, 'pt-BR'),
+    hexColor: validator.isHexColor(campoDeTexto.value),
+    email: validator.isEmail(campoDeTexto.value),
+    uuid: validator.isUUID(campoDeTexto.value, UUID_VERSION),
+    url: validator.isURL(campoDeTexto.value),
+  };
 
-passwordBtnEl.addEventListener('click', () => {
-  const randomPassword = nanoid();
-  displayPasswordEl.innerHTML = randomPassword;
+  // O objeto 'campos' possui as chaves com o mesmo nome
+  // das opções do seletor em nossa página. Assim, podemos
+  // selecionar a chave de acordo com o selecionado no HTML
+  textoDeSaida.innerHTML = `A validação retornou ${campos[seletor.value]}`;
 });
-
-displayPasswordEl.addEventListener('click', function (event) {
-     copy(event.target.innerHTML);    
-  });
