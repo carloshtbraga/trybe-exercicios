@@ -8,10 +8,14 @@ class App extends React.Component {
     numeroClique3: 0,
   }
 
+  getColor = (numero) => {
+    return numero % 2 === 0 ? 'green' : 'white';
+  }
+
   click1 = () => {
     this.setState((previous) => ({
       numeroClique1: previous.numeroClique1 + 1,
-    }))
+    }), () => console.log(`Botão 1 ${this.getColor(this.state.numeroClique1)}`))
   };
 
   click2 = () => {
@@ -29,9 +33,18 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.click1}>{this.state.numeroClique1}</button>
-        <button onClick={this.click2}>{this.state.numeroClique2}</button>
-        <button onClick={this.click3}>{this.state.numeroClique3}</button>
+        <button 
+        style={ { backgroundColor: this.getColor(this.state.numeroClique1) } } 
+        onClick={this.click1}>{this.state.numeroClique1}
+        </button>
+        <button
+        style={ { backgroundColor: this.getColor(this.state.numeroClique2) } } 
+        onClick={this.click2}>{this.state.numeroClique2}
+        </button>
+        <button 
+        style={ { backgroundColor: this.getColor(this.state.numeroClique3) } } 
+        onClick={this.click3}>{this.state.numeroClique3}
+        </button>
       </div>
     );
   }
