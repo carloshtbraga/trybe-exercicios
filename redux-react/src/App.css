@@ -1,0 +1,184 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+.dark1 {
+  min-height: 100vh;
+  background-color: rgb(30,30,30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.dark2{
+  background-color: lightgrey;
+  padding: 80px;
+  display: flex;
+  border-radius: 6%;
+  box-shadow: rgb(165, 165, 165) 5px 5px 5px;
+  flex-direction: column;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+  font-style: italic;
+  
+}
+
+.dark2 button{
+  margin-top: 20px;
+  font-weight: 700;
+  width: 100%;
+  background-color: rgb(61, 61, 61);
+  padding: 5px;
+  box-shadow: rgb(165, 165, 165) 2px 2px 2px;
+  border: none;
+  color: rgb(199, 199, 199);
+  /* border-radius: 10%; */
+}
+
+.dark2 button:hover{
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+h3{
+  margin-top: 40px;
+}
+
+h2{
+  margin-top: 10px;
+  font-size: xx-large
+}
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+.light1 {
+  min-height: 100vh;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.light2{
+  background-color: white;
+  padding: 80px;
+  display: flex;
+  border-radius: 6%;
+  box-shadow: rgb(165, 165, 165) 5px 5px 5px;
+  flex-direction: column;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+  font-style: italic;
+  position: relative;
+}
+
+.light2 button{
+  margin-top: 20px;
+  font-weight: 700;
+  width: 100%;
+  padding: 5px;
+  box-shadow: rgb(165, 165, 165) 2px 2px 2px;
+  border: none;
+  /* border-radius: 10%; */
+}
+
+.light2 button:hover{
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+img {
+  width: 20px;
+  position: relative;
+  margin-left: 120px;
+  margin-top: -22px;
+}
+
+
+
+
+
+
+
+/* .dark{
+  text-align: center;
+  font-size: xx-large;
+  background-color: rgb(30, 30, 30);
+  color: lightgrey; 
+}
+
+.dark button {
+  border-radius: 8px;
+  padding: 6px;
+  background-color: lightgrey;
+  color: rgb(30, 30, 30);
+}
+
+.dark button:hover{
+  cursor: pointer;
+  font-weight: 800;
+}
+
+
+.light {
+  text-align: center;
+  font-size: xx-large;
+  background-color: lightgrey;
+  color: rgb(30, 30, 30);
+}
+
+.light button {
+  border-radius: 8px;
+  padding: 6px;
+  background-color: rgb(30, 30, 30);
+  color: lightgrey;
+}
+
+.light button:hover{
+  cursor: pointer;
+  font-weight: 800;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+  text-align: center;
+  font-size: xx-large;
+}
+
+button {
+  border-radius: 8px;
+  padding: 6px;
+}
+
+
+
+.dark {
+  background-color: rgb(30,30,30);
+  color: lightgrey;
+} */
